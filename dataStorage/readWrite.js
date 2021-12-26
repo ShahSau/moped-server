@@ -5,7 +5,7 @@ const fs = require("fs").promises;
 //reading data from storage
 async function readStorage(path) {
   try {
-    const data = fs.readFile(path, "utf8");
+    const data =await fs.readFile(path, "utf8");
     return JSON.parse(data); // converting from JSON format to javascript object
   } catch (err) {
     console.log(err.message);

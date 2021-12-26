@@ -9,7 +9,7 @@ const {
 } = require("./storageLayer");
 
 module.exports = class DataStroage {
-  gatAll() {
+  getAll() {
     return getAll();
   }
 
