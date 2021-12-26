@@ -14,16 +14,21 @@ async function readStorage(path) {
 }
 
 //writing data to storage
-async function writeStorage(path, data){
-    try{
-        //converting javascript to json format and while converting, inserting 4 space characters for each white space
-        await fs.writeFile(path, JSON.stringify(data,null,4),{
-            encoding:"utf8",
-            flag:"w"
-        })
-        return true
-    }catch(err){
-        console.log(err.message);
-        return false
-    }
+async function writeStorage(path, data) {
+  try {
+    //converting javascript to json format and while converting, inserting 4 space characters for each white space
+    await fs.writeFile(path, JSON.stringify(data, null, 4), {
+      encoding: "utf8",
+      flag: "w",
+    });
+    return true;
+  } catch (err) {
+    console.log(err.message);
+    return false;
+  }
 }
+
+module.exports = {
+  readStorage,
+  writeStorage,
+};
