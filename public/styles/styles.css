@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgb(64, 59, 150) 0%,
+    rgba(119, 119, 153, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  
+  margin-top: 3rem;
+}
+main{
+    display: grid;
+	align-items: center;
+	justify-items: center;
+}
+button {
+	font-size: 1.5rem;
+	width: 15em;
+	height: 2em;
+	margin: 0.5em;
+	cursor: pointer;
+}
+table {
+	border-collapse: collapse;
+	margin-bottom: 1em;
+}
+
+table, th, td {
+	border: 2px solid rgb(0, 0, 0);
+	padding: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+h1 {
+  padding: 0.5rem;
+  font-size: largeer;
+}
+a {
+  color: rgb(5, 49, 121);
+}
+.form-field {
+  display: flex;
+  width: 60vw;
+  line-height: 3rem;
+  margin: 0.5rem;
+}
+label {
+  flex-basis: 20%;
+}
+input {
+  flex-basis: 40%;
+  text-transform: capitalize;
+  padding: 1rem;
+  font-size: 1.2rem;
+  width: 15em;
+}
+input[readonly] {
+  background-color: rgb(52, 50, 50);
+}
+p {
+    line-height: 3rem;
+  }
