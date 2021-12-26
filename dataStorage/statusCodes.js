@@ -49,7 +49,7 @@ const MESSAGES = {
     type: "error",
   }),
   UPDATE_OK: (id) => ({
-    message: `Info of moped with id${id} updated`,
+    message: `Info of moped with id ${id} updated`,
     code: CODES.UPDATE_OK,
     type: "info",
   }),

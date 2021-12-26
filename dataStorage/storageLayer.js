@@ -30,10 +30,11 @@ async function addOne(newMoped){
 //update
 async function updateOne(updatedMoped){
     const data = await readStorage(filePath)
-    const oldInfo = data.find(mop=>mop.mopedId === id) || null
-    if(oldInfo !== null){
+    const oldInfo = data.find(mop=>mop.mopedId === updatedMoped.mopedId)
+    if(oldInfo){
         Object.assign(oldInfo, adapt(updatedMoped))
         const updated = await writeStorage(filePath, data)
+        console.log(typeof(updated.mopedId))
         return updated
     }
     return false

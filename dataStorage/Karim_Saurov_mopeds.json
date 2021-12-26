@@ -28,13 +28,6 @@
         "itemsInStock": 130
     },
     {
-        "mopedId": 1,
-        "name": "Daddy 1",
-        "topspeed": 15,
-        "rating": "**",
-        "itemsInStock": 30
-    },
-    {
         "mopedId": 3,
         "name": "MotoX 2000",
         "topspeed": 30,
@@ -43,9 +36,16 @@
     },
     {
         "mopedId": 2,
-        "name": "Mummy 10",
+        "name": "Musssmmy 10",
         "topspeed": 20,
         "rating": "*",
         "itemsInStock": 100
+    },
+    {
+        "mopedId": 77,
+        "name": "best one",
+        "rating": "*****",
+        "topspeed": 100,
+        "itemsInStock": 25
     }
 ]
