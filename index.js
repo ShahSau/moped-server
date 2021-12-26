@@ -28,10 +28,37 @@ app.get("/", (req, res) => {
 });
 
 //getall
-app.get("/all", (req,res)=>{
-    dataStorage.getAll()
-    .then(data=>res.render("getAll", {result:data}))
-})
+app.get("/all", (req, res) => {
+  dataStorage.getAll().then((data) => res.render("getAll", { result: data }));
+});
+
+//get one
+app.get("/getmoped", (req, res) => {
+  res.render("search", {
+    action: "/getmoped",
+  });
+});
+
+app.post("/getmoped", async (req, res) => {
+  if (!req.body || !req.body.id) {
+    res.sendStatus(500);
+  }
+  const mopedid = Number(req.body.id);
+
+  await dataStorage
+    .getOne(mopedid)
+    .then((moped) => res.render("getMoped", { result: moped }))
+    .catch((err) => sendErrorPage(res, err));
+
+  mopedid;
+});
+
+function sendErrorPage(res, error, title = "Error", header = "Error") {
+  sendStatusPage(res, error, title, header);
+}
+function sendStatusPage(res, status, title = "Status", header = "Status") {
+  res.render("statusPage", { title, header, status });
+}
 server.listen(port, host, () =>
   console.log(`server started on ${host}:${port}`)
 );

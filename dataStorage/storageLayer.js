@@ -15,7 +15,7 @@ async function getAll(){
 //get one with specific id
 async function getOne(id){
     const data = await readStorage(filePath)
-    const one = data.find(mop=>mop.mopedId === id) || null
+    const one =await data.find(mop=>mop.mopedId === id) || null
     return one
 }
 
