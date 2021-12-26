@@ -38,7 +38,7 @@ module.exports = class DataStroage {
       if (await addOne(newObj)) {
         resolve(MESSAGES.INSERT_OK(newObj.mopedId));
       } else {
-        reject(MESSAGES.NOT_INSERTED());
+        reject(MESSAGES.NOT_INSERTED(newObj.mopedId));
       }
     });
   }

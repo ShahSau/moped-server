@@ -5,7 +5,7 @@ const { readStorage, writeStorage } = require("./readWrite");
 const {jsonStorageFile, adapterFile} = require("./storageConfig.json")
 
 const filePath = path.join(__dirname, jsonStorageFile)
-const {adapt} = path.join(__dirname, adapterFile)
+const {adapt} = require(path.join(__dirname, adapterFile))
 
 //getting all
 async function getAll(){

@@ -1,11 +1,13 @@
 "use strict"
 
 //the function ensures mopedId,topspeed and itemsInStock are number
-function adapt(item){
-    return Object.assign(item,{
+const adapt=(item)=>{
+    return {
         mopedId:+item.mopedId,
+        name:item.name,
+        rating:item.rating,
         topspeed:+item.topspeed,
         itemsInStock:+item.itemsInStock
-    })
+    }
 }
-module.exports={adapt}
+module.exports={ adapt }

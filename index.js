@@ -35,6 +35,7 @@ app.get("/all", (req, res) => {
 //get one
 app.get("/getmoped", (req, res) => {
   res.render("search", {
+    header: "Get",
     action: "/getmoped",
   });
 });
@@ -49,10 +50,49 @@ app.post("/getmoped", async (req, res) => {
     .getOne(mopedid)
     .then((moped) => res.render("getMoped", { result: moped }))
     .catch((err) => sendErrorPage(res, err));
-
-  mopedid;
 });
 
+//removing one
+app.get("/removemoped", (req, res) =>
+  res.render("search", {
+    header: "Delete",
+    action: "/removemoped",
+  })
+);
+app.post("/removemoped", async (req, res) => {
+  if (!req.body || !req.body.id) {
+    res.sendStatus(500);
+  }
+  const mopedid = Number(req.body.id);
+
+  await dataStorage
+    .remove(mopedid)
+    .then((status) => sendStatusPage(res, status))
+    .catch((err) => sendErrorPage(res, err));
+});
+
+//adding one
+app.get("/addmoped", (req, res) => {
+  res.render("form", {
+    action: "/add",
+    mopedId: { value: "", readonly: "" },
+    name: { value: "", readonly: "" },
+    topspeed: { value: "", readonly: "" },
+    rating: { value: "", readonly: "" },
+    itemsInStock: { value: "", readonly: "" },
+  });
+});
+app.post("/add", async (req, res) => {
+  if (!req.body || !req.body.mopedId) {
+    res.sendStatus(500);
+  }
+  await dataStorage
+    .insert(req.body)
+    .then((status) => sendStatusPage(res, status))
+    .catch((err) => sendErrorPage(res, err));
+});
+
+//error page
 function sendErrorPage(res, error, title = "Error", header = "Error") {
   sendStatusPage(res, error, title, header);
 }

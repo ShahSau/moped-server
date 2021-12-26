@@ -1,51 +1,51 @@
 [
     {
-    "mopedId":7,
-    "name":"MaxNoise 120",
-    "topspeed":40,
-    "rating":"**",
-    "itemsInStock":350
+        "mopedId": 7,
+        "name": "MaxNoise 120",
+        "topspeed": 40,
+        "rating": "**",
+        "itemsInStock": 350
     },
     {
-    "mopedId":6,
-    "name":"Skooter 95",
-    "topspeed":5,
-    "rating":"***",
-    "itemsInStock":50
+        "mopedId": 6,
+        "name": "Skooter 95",
+        "topspeed": 5,
+        "rating": "***",
+        "itemsInStock": 50
     },
     {
-    "mopedId":4,
-    "name":"Grampa 89",
-    "topspeed":25,
-    "rating":"****",
-    "itemsInStock":70
+        "mopedId": 4,
+        "name": "Grampa 89",
+        "topspeed": 25,
+        "rating": "****",
+        "itemsInStock": 70
     },
     {
-    "mopedId":5,
-    "name":"Xross 3",
-    "topspeed":10,
-    "rating":"*",
-    "itemsInStock":130
+        "mopedId": 5,
+        "name": "Xross 3",
+        "topspeed": 10,
+        "rating": "*",
+        "itemsInStock": 130
     },
     {
-    "mopedId":1,
-    "name":"Daddy 1",
-    "topspeed":15,
-    "rating":"**",
-    "itemsInStock":30
+        "mopedId": 1,
+        "name": "Daddy 1",
+        "topspeed": 15,
+        "rating": "**",
+        "itemsInStock": 30
     },
     {
-    "mopedId":3,
-    "name":"MotoX 2000",
-    "topspeed":30,
-    "rating":"*****",
-    "itemsInStock":150
+        "mopedId": 3,
+        "name": "MotoX 2000",
+        "topspeed": 30,
+        "rating": "*****",
+        "itemsInStock": 150
     },
     {
-    "mopedId":2,
-    "name":"Mummy 10",
-    "topspeed":20,
-    "rating":"*",
-    "itemsInStock":100
+        "mopedId": 2,
+        "name": "Mummy 10",
+        "topspeed": 20,
+        "rating": "*",
+        "itemsInStock": 100
     }
-    ]
+]

@@ -28,8 +28,8 @@ const MESSAGES = {
     code: CODES.INSERT_OK,
     type: "info",
   }),
-  NOT_INSERTED: () => ({
-    message: "Something went wrong, Moped with id:${id} is notadded!",
+  NOT_INSERTED: (id) => ({
+    message: `Something went wrong, Moped with id:${id} is notadded!`,
     code: CODES.NOT_INSERTED,
     type: "error",
   }),
